@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Project 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cf9191;
+			background-image: url("../images/4_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dcddf1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(42, 37, 37, 0.1);
+			background-image: url("../images/5_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        h1 {
+            text-align: center;
+        }
+        .screenshot {
+            margin-bottom: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+		#enlargedImg {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+		}
+
+		#enlargedImg img {
+			display: block;
+			margin: auto;
+			max-width: 90%;
+			max-height: 90%;
+			padding: 20px;
+			cursor: pointer;
+		}
+		figcaption {
+			background-color: transparent;
+			color: rgb(0, 0, 0);
+			font-style: Bold;
+			padding: 2px;
+			text-align: center;
+			
+		}
+		h2 {
+			
+		}
+
+		
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Covid Information</h1>
+
+    <div class="screenshot">
+		<h3> 
+			<ul>
+				<li>This project aims to showcase the versatility and practicality of SQL in various database management scenarios. </li><br>
+				<li>In this project, we delve into Covid Information of all Countries and utilize the Power of Queries in SQL.</li><br>
+				<li><strong>Death Percentage</strong> - We check the Total Cases vs Total Deaths. <br> 'Y' and 'N' to 'Yes' and 'No' in Sold Column.</li><br>
+				<li><strong>Infection Rate</strong> - Infection Rate is checked by Country to Country bases showcasing the highest Infected Country at the top. 
+					<br>Similarly we check for Death Rate</li><br>
+				<li><strong>Vaccination Percentage</strong> - Total Population vs The no. of People who have Vaccinated and their Percentage.</li><br>
+				<li><strong>CTE and Temp Tables</strong> - We use CTE and Temp Tabels to <strong>Reuse</strong> and <strong>Optimize</strong> the Queries </li><br>
+				<li><strong>Views</strong> -  We use Views for <strong>Simplifying</strong> and to <strong>Optimize</strong> the Queries </li><br>
+			</ul>
+		</h3>
+
+        <img src="..\images\inside_projects_img\SQL\1\Sql_1.png" title="Visulization" alt="Tableau1" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Cleaned and Transformed Covid Data</h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		<br><br><br>
+		<img src="..\images\inside_projects_img\SQL\1\Covid_Dataset_1.png" title="Dataset" alt="Tableau1" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Dataset</h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		
+    </div >
+	
+	<br><br><br><br>
+    <div class="screenshot">
+		<p>More Information on the Project and its Files on Github </p>
+		<p>Github Link: <a href="https://github.com/at-py/PortfolioProjects/blob/main/SQL_Covid_Info.sql" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></p>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+	function showImage(src) {
+	  document.getElementById("enlargedImg").style.display = "block";
+	  document.querySelector("#enlargedImg img").src = src;
+	}
+  
+	function hideImage() {
+	  document.getElementById("enlargedImg").style.display = "none";
+	}
+  </script>
+</body>
+</html>

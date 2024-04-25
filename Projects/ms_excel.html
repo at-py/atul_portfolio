@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning and Visualizing in MS-Excel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cf9191;
+			background-image: url("../images/4_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dcddf1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(42, 37, 37, 0.1);
+			background-image: url("../images/5_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        h1 {
+            text-align: center;
+        }
+        .screenshot {
+            margin-bottom: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+		#enlargedImg {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+		}
+
+		#enlargedImg img {
+			display: block;
+			margin: auto;
+			max-width: 90%;
+			max-height: 90%;
+			padding: 20px;
+			cursor: pointer;
+		}
+		figcaption {
+			background-color: transparent;
+			color: rgb(0, 0, 0);
+			font-style: Bold;
+			padding: 2px;
+			text-align: center;
+			
+		}
+		h2 {
+			
+		}
+
+		
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cleaning and Visualizing in MS-Excel</h1>
+
+    <div class="screenshot">
+		<h3> 
+			<ul>
+				<li>After cleaning and organizing the data in Excel, here are the conclusions drawn from each visualization: </li><br>
+				<li><strong>Bike Purchased per avg Income based on Gender </strong>- Avg Income of both Male and Female who said yes to purchasing a Bike was higher than their counterpart.</li><br>
+				<li><strong>Customer Age Bracket </strong>- Middle Aged People have said yes to purchasing a bike more than Younge ones and the Older people.</li><br>
+				<li><strong>Customer Commute </strong>- The Numebr of people that commute a certain distance. A lot more people commute just 1 mile.</li><br>
+				<li><strong>Count of Purchsed Bikes</strong> - showcases people saying 'Yes' or 'No' to purchasing Bikes at a particular Age.</li><br>
+			</ul>
+		</h3>
+
+        <img src="..\images\inside_projects_img\MS_Excel\1\Result_Clean_and_Visualization.png" title="Cleaning and Visualizing in MS-Excel" alt="Cleaning and Visualizing in MS-Excel" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Cleaned Dataset and Visualizing the Result</h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		<br><br><br>
+		<img src="..\images\inside_projects_img\MS_Excel\1\Unclean_Dataset.png" title="Dataset" alt="Cleaning and Visualizing in MS-Excel" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Unclean Dataset </h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		
+    </div >
+	
+	<br><br><br><br>
+    <div class="screenshot">
+		<p>More Information on the Project and its Files on Github </p>
+		<p>Github Link: <a href="https://github.com/at-py/PortfolioProjects/tree/main/Excel" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></p>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+	function showImage(src) {
+	  document.getElementById("enlargedImg").style.display = "block";
+	  document.querySelector("#enlargedImg img").src = src;
+	}
+  
+	function hideImage() {
+	  document.getElementById("enlargedImg").style.display = "none";
+	}
+  </script>
+</body>
+</html>

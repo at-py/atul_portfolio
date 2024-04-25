@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cf9191;
+			background-image: url("../images/4_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dcddf1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(42, 37, 37, 0.1);
+			background-image: url("../images/5_1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        h1 {
+            text-align: center;
+        }
+        .screenshot {
+            margin-bottom: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+		#enlargedImg {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+		}
+
+		#enlargedImg img {
+			display: block;
+			margin: auto;
+			max-width: 90%;
+			max-height: 90%;
+			padding: 20px;
+			cursor: pointer;
+		}
+		figcaption {
+			background-color: transparent;
+			color: rgb(0, 0, 0);
+			font-style: Bold;
+			padding: 2px;
+			text-align: center;
+			
+		}
+		h2 {
+			
+		}
+
+		
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tableau Project</h1>
+
+    <div class="screenshot">
+		<h3> 
+			<ul>
+				<li>In this project, we explore the journey from raw, unclean data to polished, insightful visualizations using Tableau. </li><br>
+				<li>This particular dataset contains AirBnb customer data set which is puclicly available on kaggle.</li><br>
+				<li>By employing data cleaning techniques, we address inconsistencies, errors, and missing values within the dataset such as removing blank/ redundant columns, thus ensuring 
+					the dataset's reliability and accuracy before Visualization.</li><br>
+				<li>There are several Visualizations here such as -
+					<ol><br>
+						<li><strong> Avg Price per Bedroom </strong>- The prices go up as the number of rooms increase</li>
+						<li><strong>Distinct count of Bedroom Listings </strong>- The number of listings based on the number of bedrooms provided by lister </li>
+						<li><strong>Avg price vs Zipcode </strong>- A top down View of the mapped zipcode area showcasing avg price per Zipcode  </li>
+						<li><strong>Price by Zipcode </strong>- A column view of Avg price in a given Zipcode Area</li>
+						<li><strong>Revenue for Year </strong>- Shows the Revenue Generated throught the dates of the year for 2016</li>
+					</ol><br>
+					
+				</li>
+			</ul>
+		</h3>
+
+        <img src="..\images\inside_projects_img\Tableau\1\Tableau_Final.png" title="Visulization" alt="Tableau1" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Visulization</h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		<br><br><br>
+		<img src="..\images\inside_projects_img\Tableau\1\Tableau_Dataset.png" title="Dataset" alt="Tableau1" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">
+		<figcaption><h3>Dataset</h3></figcaption>
+		<div id="enlargedImg" onclick="hideImage()">
+			<img src="" alt="Enlarged Image">
+		</div>
+		
+    </div >
+	
+	<br><br><br><br>
+    <div class="screenshot">
+		<p>More Information on the Project and its Files on Github </p>
+		<p>Github Link: <a href="https://github.com/at-py/PortfolioProjects/tree/main/Tableau" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></p>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+	function showImage(src) {
+	  document.getElementById("enlargedImg").style.display = "block";
+	  document.querySelector("#enlargedImg img").src = src;
+	}
+  
+	function hideImage() {
+	  document.getElementById("enlargedImg").style.display = "none";
+	}
+  </script>
+</body>
+</html>

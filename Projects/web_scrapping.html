@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scrapping using Pandas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cf9191;
+			background-image: url(../images/Background_Image_1.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dcddf1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			background-image: url(../images/Bk_img_2.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+        }
+        h1 {
+            text-align: center;
+        }
+        .screenshot {
+            margin-bottom: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+		#enlargedImg {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+		}
+
+		#enlargedImg img {
+			display: block;
+			margin: auto;
+			max-width: 90%;
+			max-height: 90%;
+			padding: 20px;
+			cursor: pointer;
+		}
+		figcaption {
+			background-color: transparent;
+			color: rgb(0, 0, 0);
+			font-style: Bold;
+			padding: 2px;
+			text-align: center;
+			
+		}
+		.imageblock {
+			display: flex;
+			justify-content: space-between;
+		}
+		h2 {
+			
+		}
+
+		
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Web Scrapping using Pandas</h1>
+
+    <div class="screenshot">
+		<h3> 
+			<ul>
+				<li>Web scraping is a powerful technique used to extract data from websites, enabling us to gather valuable 
+							information for analysis and insights. </li><br>
+				<li>In this project, we delve into web scraping a table containing trophies won by England clubs throughout their history.</li><br>
+				<li>Using the Python library Pandas, we will extract, clean, and organize the data from the webpage, transforming it 
+							into a structured format for further analysis.</li><br>
+				<li>collect and utilize historical trophy data to gain insights into the success and achievements of England clubs over time.</li><br>
+				<li>The 2nd Project showcases the Top 100 Companies based on their Revenue Shares in USA</li>
+				<li>Through this process, we have transformed unstructured web data into a structured format suitable for analysis.</li><br>
+				<li>By leveraging Pandas' capabilities, we cleaned and prepared the data, making it ready for further exploration and insights. </li><br>
+			</ul>
+		</h3>
+		<h2>Football Trophies won by English Clubs -</h2>
+		<div class="imageblock">
+			<p><img src="..\images\inside_projects_img\Web_Scrapping\1\English_Football.png" title="Storing in Excel" alt="Web Scrapping" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">Extracted Data Stored in Excel - Football Trophies Won by Clubs</p>
+			<figcaption><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></figcaption>
+			<div id="enlargedImg" onclick="hideImage()">
+				<img src="" alt="Enlarged Image">
+			</div>
+			<br><br><br>
+			<p><img src="..\images\inside_projects_img\Web_Scrapping\1\dataset_1.png" title="Dataset" alt="Web Scrapping" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">Dataset Acquired from Wikipedia</p>
+			<figcaption><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></figcaption>
+			<div id="enlargedImg" onclick="hideImage()">
+				<img src="" alt="Enlarged Image">
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br>
+		<h2>Top 100 US Companies based on their Revenue -</h2>
+		<div class="imageblock">
+			<br><br><br><br><br><br>
+			
+			<p><img src="..\images\inside_projects_img\Web_Scrapping\2\Top_100_Company_Revenues.png" title="Storing in Excel" alt="Web Scrapping" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">The Top 100 Companies based on Revenue</p>
+			<figcaption><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	</h3></figcaption>
+			<div id="enlargedImg" onclick="hideImage()">
+				<img src="" alt="Enlarged Image">
+			</div>
+			<br><br><br>
+			<p><img src="..\images\inside_projects_img\Web_Scrapping\2\Dataset_2.png" title="Dataset" alt="Web Scrapping" onclick="showImage(this.src)" style="cursor:pointer;width:700px;height:400px;">Dataset Acquired from Wikipedia</p>
+			<figcaption><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></figcaption>
+			<div id="enlargedImg" onclick="hideImage()">
+				<img src="" alt="Enlarged Image">
+			</div>
+		</div>
+		
+    </div >
+	
+	<br><br><br><br>
+    <div class="screenshot">
+		<p>More Information on the Project and its Files on Github </p>
+		<p>Github Link: <a href="https://github.com/at-py/PortfolioProjects/tree/main/Web%20Scrapping" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></p>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+	function showImage(src) {
+	  document.getElementById("enlargedImg").style.display = "block";
+	  document.querySelector("#enlargedImg img").src = src;
+	}
+  
+	function hideImage() {
+	  document.getElementById("enlargedImg").style.display = "none";
+	}
+  </script>
+</body>
+</html>
